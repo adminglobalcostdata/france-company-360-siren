@@ -1,0 +1,204 @@
+{
+ "columns": [
+  {
+   "name": "siren",
+   "type": "string",
+   "description": "Company SIREN (9 digits). Legal entities only."
+  },
+  {
+   "name": "name",
+   "type": "string",
+   "description": "Legal name from the INSEE SIRENE extract."
+  },
+  {
+   "name": "naf",
+   "type": "string",
+   "description": "NAF/APE activity code, e.g. 56.30Z."
+  },
+  {
+   "name": "legal_form_code",
+   "type": "string",
+   "description": "INSEE legal-form code (never 1xxx: no individual entrepreneurs)."
+  },
+  {
+   "name": "legal_form",
+   "type": "string",
+   "description": "Legal form label (SAS, SARL...)."
+  },
+  {
+   "name": "creation_date",
+   "type": "string",
+   "description": "Creation date of the legal unit (ISO)."
+  },
+  {
+   "name": "active",
+   "type": "boolean",
+   "description": "True if the legal unit was administratively active in the SIRENE extract."
+  },
+  {
+   "name": "city",
+   "type": "string",
+   "description": "City, where the SIRENE extract carried it, else null."
+  },
+  {
+   "name": "postal_code",
+   "type": "string",
+   "description": "Postal code, where available, else null."
+  },
+  {
+   "name": "department",
+   "type": "string",
+   "description": "Department code, where available, else null."
+  },
+  {
+   "name": "workforce_band_code",
+   "type": "string",
+   "description": "INSEE workforce band code, null if unknown."
+  },
+  {
+   "name": "sources_count",
+   "type": "number",
+   "description": "Number of source families that know this SIREN among bodacc, decp, alimconfiance, rge, epv, rfar (always >= 2)."
+  },
+  {
+   "name": "sources_list",
+   "type": "string",
+   "description": "Space-separated source families present: bodacc decp alimconfiance rge epv rfar."
+  },
+  {
+   "name": "contracts_won_count",
+   "type": "number",
+   "description": "Public contracts won (DECP, distinct contracts). Null if the SIREN is not a DECP supplier."
+  },
+  {
+   "name": "contracts_total_declared_amount_eur",
+   "type": "number",
+   "description": "Sum of usable declared contract amounts in EUR; null if none, never 0. Not a measure of revenue."
+  },
+  {
+   "name": "contracts_distinct_buyers_count",
+   "type": "number",
+   "description": "Distinct public buyers (SIRET) in DECP."
+  },
+  {
+   "name": "contracts_last_notification_date",
+   "type": "string",
+   "description": "Latest DECP notification date (ISO)."
+  },
+  {
+   "name": "bodacc_notices_count",
+   "type": "number",
+   "description": "BODACC notices about this SIREN in our extracts (business purchases + registrations + strike-offs). Null if none."
+  },
+  {
+   "name": "bodacc_business_purchases_count",
+   "type": "number",
+   "description": "BODACC business-sale notices where the company is the buyer (2023-07 to 2026-07)."
+  },
+  {
+   "name": "bodacc_registration_notices_count",
+   "type": "number",
+   "description": "BODACC registration (creation) notices (2025-08 to 2026-07)."
+  },
+  {
+   "name": "bodacc_strike_off_notices_count",
+   "type": "number",
+   "description": "BODACC strike-off (radiation) notices (2025-08 to 2026-07)."
+  },
+  {
+   "name": "bodacc_last_notice_date",
+   "type": "string",
+   "description": "Date of the latest BODACC notice among those counted (ISO)."
+  },
+  {
+   "name": "bodacc_last_notice_kind",
+   "type": "string",
+   "description": "Kind of that latest notice: business-sale, creation or radiation."
+  },
+  {
+   "name": "food_inspections_count",
+   "type": "number",
+   "description": "Official food-safety inspections (Alim'confiance) over all establishments of the company in the published window (about 12 months). Null if none."
+  },
+  {
+   "name": "food_establishments_inspected_count",
+   "type": "number",
+   "description": "Distinct establishments (SIRET) inspected."
+  },
+  {
+   "name": "food_last_inspection_date",
+   "type": "string",
+   "description": "Date of the latest food-safety inspection (ISO)."
+  },
+  {
+   "name": "food_last_inspection_outcome",
+   "type": "string",
+   "description": "Outcome of the latest inspection as published (e.g. Tres satisfaisant, Satisfaisant, A ameliorer, A corriger de maniere urgente)."
+  },
+  {
+   "name": "food_last_inspection_activity",
+   "type": "string",
+   "description": "Activity type of the latest inspected establishment."
+  },
+  {
+   "name": "rge_qualifications_count",
+   "type": "number",
+   "description": "RGE (ADEME) qualification lines held by the company's establishments."
+  },
+  {
+   "name": "rge_establishments_count",
+   "type": "number",
+   "description": "Distinct establishments (SIRET) with an RGE qualification."
+  },
+  {
+   "name": "rge_domains",
+   "type": "string",
+   "description": "RGE domains, separated by semicolons."
+  },
+  {
+   "name": "rge_latest_start_date",
+   "type": "string",
+   "description": "Latest RGE qualification start date (ISO)."
+  },
+  {
+   "name": "rge_latest_end_date",
+   "type": "string",
+   "description": "Latest RGE qualification end date; null when the source gives none (2099 placeholder removed)."
+  },
+  {
+   "name": "epv_label",
+   "type": "boolean",
+   "description": "True if the company holds the Entreprise du Patrimoine Vivant label, else null."
+  },
+  {
+   "name": "epv_universe",
+   "type": "string",
+   "description": "EPV craft universe."
+  },
+  {
+   "name": "epv_label_start_date",
+   "type": "string",
+   "description": "EPV label start date (ISO)."
+  },
+  {
+   "name": "epv_label_end_date",
+   "type": "string",
+   "description": "EPV label end date (ISO)."
+  },
+  {
+   "name": "supplier_label_category",
+   "type": "string",
+   "description": "Label Relations Fournisseurs et Achats Responsables: size category (PME, ETI, GE)."
+  },
+  {
+   "name": "supplier_label_scope",
+   "type": "string",
+   "description": "Perimeter covered by the supplier-relations label."
+  },
+  {
+   "name": "last_activity_date",
+   "type": "string",
+   "description": "Most recent dated event among DECP notification, BODACC notice and food inspection (ISO, never in the future). Used by watch mode."
+  }
+ ]
+}

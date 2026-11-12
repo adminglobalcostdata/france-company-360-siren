@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this dataset, please cite it as below and credit the original source."
+title: "France Company 360 by SIREN: contracts, BODACC, labels"
+type: dataset
+authors:
+  - family-names: "Bousquet"
+    given-names: "Henri"
+abstract: "One card per French company (SIREN) crossing public contracts won, BODACC notices, official food-safety inspections and RGE, EPV and supplier labels. Legal entities only, at least two sources each. Embedded data, pay per row."
+url: "https://apify.com/phonic_lily/france-company-360-siren"
+repository-code: "https://github.com/adminglobalcostdata/france-company-360-siren"
+date-released: 2026-11-12
+keywords:
+  - open-data
+  - dataset
+  - json
+  - jsonl
+  - apify
+  - apify-actor
+  - data-api
+  - france
